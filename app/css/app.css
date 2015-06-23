@@ -7818,15 +7818,39 @@ th.hide-for-touch {
 
 /* all app scss styles here */
 .video-bg {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  z-index: 0; }
+  height: auto;
+  z-index: 0;
+  background-color: #000; }
+  @media only screen and (min-width:40.0625em) {
+    .video-bg {
+      height: 100vh; } }
+  @media only screen and (max-width: 40em) {
+    .video-bg {
+      background-image: url('../images/still1.jpg');
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: 50% 50%; } }
+  .video-bg video {
+    visibility: hidden !important; }
+    @media only screen and (min-width:40.0625em) {
+      .video-bg video {
+        visibility: visible !important; } }
 
 .flexy {
-  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   top: 0;
   left: 0;
   width: 100%;
@@ -7835,20 +7859,27 @@ th.hide-for-touch {
   -webkit-overflow-scrolling: touch; }
   @media only screen and (min-width:40.0625em) {
     .flexy {
-      display: flex;
-      flex-direction: column; } }
+      position: absolute; } }
   .flexy > .flexy__body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
     flex: 1; }
 
 .flexy-u--flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex; }
 
 .flexy-u--center {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
   align-self: center;
   margin-left: auto;
   margin-right: auto; }
 
-.social-button {
+.circle-button {
   display: inline-block;
   text-align: center;
   border: 1px solid #fff;
@@ -7859,40 +7890,49 @@ th.hide-for-touch {
   height: 40px;
   line-height: 40px;
   margin: 0 5px; }
-  .social-button:hover, .social-button:active, .social-button:hover:hover, .social-button:focus {
+  .circle-button:hover, .circle-button:active, .circle-button:hover:hover, .circle-button:focus {
     background-color: #fff;
     color: #000; }
-  .social-button.social-button--secondary {
+  .circle-button.circle-button--secondary {
     color: #8d8d8d;
     border-color: #B3B3B3; }
-    .social-button.social-button--secondary:hover, .social-button.social-button--secondary:active, .social-button.social-button--secondary:hover:hover, .social-button.social-button--secondary:focus {
+    .circle-button.circle-button--secondary:hover, .circle-button.circle-button--secondary:active, .circle-button.circle-button--secondary:hover:hover, .circle-button.circle-button--secondary:focus {
       background-color: #B3B3B3;
       color: #fff; }
+  .circle-button.circle-button--invert {
+    color: #000;
+    border-color: #fff;
+    background-color: #fff; }
+    .circle-button.circle-button--invert:hover, .circle-button.circle-button--invert:active, .circle-button.circle-button--invert:hover:hover, .circle-button.circle-button--invert:focus {
+      background-color: transparent;
+      color: #fff;
+      border-color: #fff; }
 
-.social-button--large {
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
+.circle-button--large {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
   margin: 0 10px;
   font-size: 22px; }
 
-.social-button--dim {
-  opacity: .2;
+.circle-button--dim {
+  opacity: .3;
   transition: opacity .1s ease-in-out; }
-  .social-button--dim:hover {
+  .circle-button--dim:hover {
     opacity: 1; }
 
 .story .story__lead {
   -webkit-font-smoothing: antialiased;
-  font-size: 1.0625rem; }
+  font-size: 1.0625rem;
+  background-color: #fff; }
   @media only screen and (min-width:40.0625em) {
     .story .story__lead {
       -webkit-column-count: 2;
       -moz-column-count: 2;
       column-count: 2;
-      -webkit-column-gap: 50px;
-      -moz-column-gap: 50px;
-      column-gap: 50px; } }
+      -webkit-column-gap: 1.875rem;
+      -moz-column-gap: 1.875rem;
+      column-gap: 1.875rem; } }
   .story .story__lead p {
     font-size: inherit; }
 .story .story__lead--dim {
@@ -7928,7 +7968,7 @@ th.hide-for-touch {
 a.link--dim {
   -webkit-font-smoothing: antialiased;
   color: #fff;
-  opacity: .3;
+  opacity: .4;
   transition: opacity .2s ease-in-out; }
   a.link--dim:hover, a.link--dim:focus, a.link--dim:active {
     opacity: 1; }

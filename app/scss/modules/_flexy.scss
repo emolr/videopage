@@ -1,11 +1,20 @@
 .flexy {
 
-	@media #{$medium-up} {
-		display: flex;
-		flex-direction: column;
-	}
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
 
-	position: absolute;
+	@media #{$medium} {
+		position: absolute;
+	}
+	
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -19,7 +28,10 @@
 	}
 
 	& > .flexy__body {
-		flex: 1;
+	-webkit-box-flex: 1;
+	    -webkit-flex: 1;
+	        -ms-flex: 1;
+	            flex: 1;
 	}
 
 	& > .flexy__footer {
@@ -31,10 +43,15 @@
 // Flexy-helpers
 
 .flexy-u--flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .flexy-u--center {
+	-webkit-align-self: center;
+	-ms-flex-item-align: center;
 	align-self: center;
 	margin-left: auto;
 	margin-right: auto;

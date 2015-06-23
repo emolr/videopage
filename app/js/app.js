@@ -33,12 +33,14 @@ var app = (function(document, $) {
 		_videoPlayer = function() {
 			// Video settings
 			$('#fullVideo').vide({
-				mp4: 'videos/forsnome.mp4',
-				webm: 'videos/Coverr-Market/chiddy.webmhd.webm'
+				mp4: 'videos/forsnome_new.mp4',
+				webm: 'videos/forsnome_new.webm',
+				// poster: 'images/still1.png',
+				// posterType: 'detect',
 			}, {
 				volume: 1,
 				playbackRate: 1,
-				muted: false,
+				muted: true,
 				loop: true,
 				autoplay: true,
 				position: '50% 50%',

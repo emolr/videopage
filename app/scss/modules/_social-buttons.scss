@@ -2,24 +2,24 @@
 $button-default-size: 40px;
 $button-default-font-size: 16px;
 
-$button-large-size: 50px;
+$button-large-size: 60px;
 $button-large-font-size: 22px;
 
 // Default
-$social-default-color: #fff;
-$social-default-color-active: #000;
+$circle-default-color: #fff;
+$circle-default-color-active: #000;
 
 // Secondary
-$social-secondary-color: #B3B3B3;
-$social-secondary-color-active: #fff;
+$circle-secondary-color: #B3B3B3;
+$circle-secondary-color-active: #fff;
 
-.social-button {
+.circle-button {
 	display: inline-block;
 	text-align: center;
-	border: 1px solid $social-default-color;
+	border: 1px solid $circle-default-color;
 	font-size: $button-default-font-size;
 
-	color: $social-default-color;
+	color: $circle-default-color;
 	border-radius: 999px;
 	width: $button-default-size;
 	height: $button-default-size;
@@ -31,28 +31,43 @@ $social-secondary-color-active: #fff;
 	&:active,
 	&:hover:hover,
 	&:focus {
-		background-color: $social-default-color;
-		color: $social-default-color-active;
+		background-color: $circle-default-color;
+		color: $circle-default-color-active;
 	}
 
 
-	&.social-button--secondary {
-		color: darken($social-secondary-color, 15%);
-		border-color: $social-secondary-color;
+	&.circle-button--secondary {
+		color: darken($circle-secondary-color, 15%);
+		border-color: $circle-secondary-color;
 
 		&:hover,
 		&:active,
 		&:hover:hover,
 		&:focus {
-			background-color: $social-secondary-color;
-			color: $social-secondary-color-active;
+			background-color: $circle-secondary-color;
+			color: $circle-secondary-color-active;
+		}
+	}
+
+	&.circle-button--invert {
+		color: $circle-default-color-active;
+		border-color: $circle-default-color;
+		background-color: $circle-default-color;
+
+		&:hover,
+		&:active,
+		&:hover:hover,
+		&:focus {
+			background-color: transparent;
+			color: $circle-default-color;
+			border-color: $circle-default-color;
 		}
 	}
 }
 
 
 // Size
-.social-button--large {
+.circle-button--large {
 	width: $button-large-size;
 	height: $button-large-size;
 	line-height: $button-large-size;
@@ -60,8 +75,8 @@ $social-secondary-color-active: #fff;
 	font-size: $button-large-font-size;
 }
 
-.social-button--dim {
-	opacity: .2;
+.circle-button--dim {
+	opacity: .3;
 	transition: opacity .1s ease-in-out;
 
 	&:hover {

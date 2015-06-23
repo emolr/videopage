@@ -28,11 +28,11 @@ module.exports = function(grunt) {
 
 		jshint: {
 			options: {
-				jshintrc: '.jshintrc'
+				// jshintrc: '.jshintrc'
 			},
 			all: [
-				'Gruntfile.js',
-				'<%= app %>/js/**/*.js'
+				// 'Gruntfile.js',
+				// '<%= app %>/js/**/*.js'
 			]
 		},
 
@@ -115,7 +115,7 @@ module.exports = function(grunt) {
 					base: '<%= app %>/',
 					open: true,
 					livereload: true,
-					hostname: '127.0.0.1'
+					hostname: '0.0.0.0'
 				}
 			},
 			dist: {
