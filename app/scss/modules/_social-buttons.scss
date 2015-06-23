@@ -1,0 +1,70 @@
+// Size
+$button-default-size: 40px;
+$button-default-font-size: 16px;
+
+$button-large-size: 50px;
+$button-large-font-size: 22px;
+
+// Default
+$social-default-color: #fff;
+$social-default-color-active: #000;
+
+// Secondary
+$social-secondary-color: #B3B3B3;
+$social-secondary-color-active: #fff;
+
+.social-button {
+	display: inline-block;
+	text-align: center;
+	border: 1px solid $social-default-color;
+	font-size: $button-default-font-size;
+
+	color: $social-default-color;
+	border-radius: 999px;
+	width: $button-default-size;
+	height: $button-default-size;
+	line-height: $button-default-size;
+	margin: 0 5px;
+
+
+	&:hover,
+	&:active,
+	&:hover:hover,
+	&:focus {
+		background-color: $social-default-color;
+		color: $social-default-color-active;
+	}
+
+
+	&.social-button--secondary {
+		color: darken($social-secondary-color, 15%);
+		border-color: $social-secondary-color;
+
+		&:hover,
+		&:active,
+		&:hover:hover,
+		&:focus {
+			background-color: $social-secondary-color;
+			color: $social-secondary-color-active;
+		}
+	}
+}
+
+
+// Size
+.social-button--large {
+	width: $button-large-size;
+	height: $button-large-size;
+	line-height: $button-large-size;
+	margin: 0 10px;
+	font-size: $button-large-font-size;
+}
+
+.social-button--dim {
+	opacity: .2;
+	transition: opacity .1s ease-in-out;
+
+	&:hover {
+		opacity: 1;
+	}
+}

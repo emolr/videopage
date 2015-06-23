@@ -1,0 +1,24 @@
+$whitespace-small: 10px;
+$whitespace-default: 30px;
+$whitespace-medium: 50px;
+$whitespace-large: 90px;
+
+.whitespace--small {
+	padding-top: $whitespace-small;
+	padding-bottom: $whitespace-small;
+}
+
+.whitespace {
+	padding-top: $whitespace-default;
+	padding-bottom: $whitespace-default;
+}
+
+.whitespace--medium {
+	padding-top: $whitespace-medium;
+	padding-bottom: $whitespace-medium;
+}
+
+.whitespace--large {
+	padding-top: $whitespace-large;
+	padding-bottom: $whitespace-large;
+}

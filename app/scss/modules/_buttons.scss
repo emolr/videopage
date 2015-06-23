@@ -1,0 +1,14 @@
+$button-clear-default-color: #fff;
+
+.button--clear-default {
+	color: $button-clear-default-color;
+	background-color: transparent;
+
+	&:hover,
+	&:hover:focus,
+	&:focus,
+	&:active, {
+		background: transparent;
+		outline: 0;
+	}
+}
