@@ -1,5 +1,5 @@
 $story-bg-color: #fff;
-$story-lead-font-size: rem-calc(17);
+$story-lead-font-size: rem-calc(18);
 $story-lead-column-gap: rem-calc(30);
 
 .story {
@@ -7,8 +7,9 @@ $story-lead-column-gap: rem-calc(30);
 
 
 	.story__lead {
-		-webkit-font-smoothing: antialiased;
+		-webkit-font-smoothing: auto;
 		font-size: $story-lead-font-size;
+	    font-family: 'Lato', sans-serif;
 	    background-color: $story-bg-color;
 
 		  @media #{$medium-up} {
@@ -22,6 +23,7 @@ $story-lead-column-gap: rem-calc(30);
 
 		  & p {
 		  	font-size: inherit;
+		  	font-family: inherit;
 		  }
 	}
 

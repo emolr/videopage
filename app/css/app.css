@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -7922,8 +7923,9 @@ th.hide-for-touch {
     opacity: 1; }
 
 .story .story__lead {
-  -webkit-font-smoothing: antialiased;
-  font-size: 1.0625rem;
+  -webkit-font-smoothing: auto;
+  font-size: 1.125rem;
+  font-family: 'Lato', sans-serif;
   background-color: #fff; }
   @media only screen and (min-width:40.0625em) {
     .story .story__lead {
@@ -7934,7 +7936,8 @@ th.hide-for-touch {
       -moz-column-gap: 1.875rem;
       column-gap: 1.875rem; } }
   .story .story__lead p {
-    font-size: inherit; }
+    font-size: inherit;
+    font-family: inherit; }
 .story .story__lead--dim {
   color: #fff;
   opacity: .3; }
