@@ -7923,10 +7923,8 @@ th.hide-for-touch {
     opacity: 1; }
 
 .story .story__lead {
-  -webkit-font-smoothing: auto;
-  font-size: 1.125rem;
-  font-family: 'Lato', sans-serif;
-  background-color: #fff; }
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.0625rem; }
   @media only screen and (min-width:40.0625em) {
     .story .story__lead {
       -webkit-column-count: 2;
